@@ -1,0 +1,14 @@
+.registration, .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+}
+div>button{
+  margin-top: 10px;
+}
