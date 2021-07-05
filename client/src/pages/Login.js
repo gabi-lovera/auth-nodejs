@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from "react";
 import Axios from "axios";
+import { Button} from "react-bootstrap";
 
 export default function Registration() {
   const [username, setUsername] = useState("");
@@ -49,7 +50,7 @@ export default function Registration() {
             setPassword(e.target.value);
           }}
         />
-        <button onClick={login}> Login </button>
+        <Button variant="primary" onClick={login}> Login </Button>
       </div>
 
       <h1>{loginStatus}</h1>

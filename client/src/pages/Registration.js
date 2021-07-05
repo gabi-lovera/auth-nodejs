@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
+import { Button} from "react-bootstrap";
 
 export default function Registration() {
   const [usernameReg, setUsernameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
+  const history = useHistory();
 
   const register = () => {
     Axios.post("http://localhost:3001/register", {
@@ -12,6 +15,9 @@ export default function Registration() {
     }).then((response) => {
       console.log(response);
     });
+
+    let path = `Login`; 
+    history.push(path);
   };
 
   return (
@@ -31,7 +37,7 @@ export default function Registration() {
           setPasswordReg(e.target.value);
         }}
       />
-      <button onClick={register}> Register </button>
+      <Button variant="primary" onClick={register}> Register </Button>
     </div>
   );
 }
