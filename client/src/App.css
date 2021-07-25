@@ -1,7 +1,6 @@
-*{
-  font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
-
 .contain {
   margin: 50px;
   display: flex;
@@ -9,12 +8,17 @@
   justify-content: center;
   align-items: center;
 }
-
 input {
   width: 250px;
   height: 40px;
 }
-
-.login input{
+.login input {
   margin-right: 5px;
+}
+.btn-reg {
+  margin: 20px;
+}
+.alert{
+  margin-top: 10px;
+  color: red;
 }

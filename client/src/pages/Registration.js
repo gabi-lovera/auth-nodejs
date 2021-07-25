@@ -9,7 +9,7 @@ export default function Registration() {
   const history = useHistory();
 
   const register = () => {
-    Axios.post("http://localhost:3001/register", {
+    Axios.post("http://localhost:3001/usuarios/registro", {
       username: usernameReg,
       password: passwordReg,
     }).then((response) => {
@@ -36,7 +36,7 @@ export default function Registration() {
           setPasswordReg(e.target.value);
         }}
       />
-      <Button variant="primary" onClick={register}> Register </Button>
+      <Button className="btn-reg" variant="primary" onClick={register}> Register </Button>
     </Container>
   );
 }
