@@ -8,7 +8,7 @@ export default function Privado() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
+            src="./images/mount.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -19,7 +19,7 @@ export default function Privado() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="./images/river.jpg"
             alt="Second slide"
           />
 
@@ -31,7 +31,7 @@ export default function Privado() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="./images/iceberg.jpg"
             alt="Third slide"
           />
 
