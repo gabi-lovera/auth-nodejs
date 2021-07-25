@@ -1,14 +1,15 @@
 import React from "react";
 import { Nav, Navbar, Form, Button, FormControl } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Navbarr = () => {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="">Navbar</Navbar.Brand>
+      <Navbar.Brand>Navbar</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="home">Home</Nav.Link>
-        <Nav.Link href="registration">Registration</Nav.Link>
-        <Nav.Link href="login">Login</Nav.Link>
+        <Nav.Link as={Link} to="/home">Home</Nav.Link>
+        <Nav.Link as={Link} to="/registration">Registration</Nav.Link>
+        <Nav.Link as={Link} to="/login">Login</Nav.Link>
       </Nav>
       <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />

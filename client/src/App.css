@@ -1,4 +1,9 @@
-.registration, .login {
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+.contain {
+  margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +14,7 @@ input {
   width: 250px;
   height: 40px;
 }
-div>button{
-  margin-top: 10px;
+
+.login input{
+  margin-right: 5px;
 }

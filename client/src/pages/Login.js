@@ -1,11 +1,10 @@
 import React, {useEffect, useState } from "react";
 import Axios from "axios";
-import { Button} from "react-bootstrap";
+import { Button, Container} from "react-bootstrap";
 
-export default function Registration() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const [loginStatus, setLoginStatus] = useState("");
 
   Axios.defaults.withCredentials = true;
@@ -23,6 +22,7 @@ export default function Registration() {
     });
   };
 
+  //
   useEffect(() => {
     Axios.get("http://localhost:3001/login").then((response) => {
       if (response.data.loggedIn === true) {
@@ -31,9 +31,8 @@ export default function Registration() {
     });
   }, []);
 
-
   return (
-    <>
+    <Container className="contain">
       <div className="login">
         <h1>Login</h1>
         <input
@@ -54,6 +53,6 @@ export default function Registration() {
       </div>
 
       <h1>{loginStatus}</h1>
-    </>
+    </Container>
   );
 }

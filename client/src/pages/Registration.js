@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { useHistory } from "react-router-dom";
-import { Button} from "react-bootstrap";
+import { Button, Container} from "react-bootstrap";
 
 export default function Registration() {
   const [usernameReg, setUsernameReg] = useState("");
@@ -16,12 +16,11 @@ export default function Registration() {
       console.log(response);
     });
 
-    let path = `Login`; 
-    history.push(path);
+    history.push("/login");
   };
 
   return (
-    <div className="registration">
+    <Container className="contain">
       <h1>Registration</h1>
       <label>Username</label>
       <input
@@ -38,6 +37,6 @@ export default function Registration() {
         }}
       />
       <Button variant="primary" onClick={register}> Register </Button>
-    </div>
+    </Container>
   );
 }
