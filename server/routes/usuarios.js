@@ -8,7 +8,7 @@ const saltRounds = 10;
 router.post('/registro', function(req, res, next) {
   const username = req.body.username;
   const password = req.body.password;
-
+  
   bcrypt.hash(password, saltRounds, (err, hash) => {
     if (err) {
       console.log(err);
